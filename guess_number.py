@@ -27,10 +27,10 @@ def check_number(user_num, number):
         print('Отличная интуиция! Вы угадали число :)')
         create_number()
     elif user_num > number:
-        print('Ваше число больше того, что загадано')
+        print('Ваше число больше того, что загадано :(')
         get_user_number(number)
     elif user_num < number:
-        print('Ваше число меньше того, что загадано')
+        print('Ваше число меньше того, что загадано :(')
         get_user_number(number)
     else:
         print('Что-то пошло не так')

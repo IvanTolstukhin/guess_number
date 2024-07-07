@@ -11,16 +11,19 @@
 
 from random import randint
 
+
 def create_number():
     number = randint(1, 100)
     get_user_number(number)
+
 
 def get_user_number(number):
     user_num = int(input())
     check_number(user_num, number)
 
+
 def check_number(user_num, number):
-    if type(user_num) != int or user_num < 0 or user_num > 100:
+    if type(user_num) is not int or user_num < 0 or user_num > 100:
         print(f'{str(user_num)} - не подходит! Введите число от 1 до 100!')
         get_user_number(number)
     elif user_num == number:
@@ -35,5 +38,6 @@ def check_number(user_num, number):
     else:
         print('Что-то пошло не так')
         get_user_number(number)
+
 
 create_number()
